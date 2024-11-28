@@ -45,19 +45,6 @@ The features of the model were composed of almost all other fields within the da
 Each of these variables potentially had a degree of correlation with the sucess or failure of a funded applicants business venture and were all kept within the model.  However, it is important to note that within the APPLICATION field there were several application types that had a low number of relative occurrences:
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -140,7 +127,7 @@ Each of these variables potentially had a degree of correlation with the sucess 
     </tr>
   </tbody>
 </table>
-</div><br><label><b>dtype:</b> int64</label>
+</div>
 
 A similar case also occurred in the CLASSIFICATION field, where there were a large number of classification types had very few occurrences (as low as 1) in the dataset.  To mitigate the potential influence of these rare occurences being outliers and skewing the results, these were consolidated into an 'OTHER' bin within each respective field.
 

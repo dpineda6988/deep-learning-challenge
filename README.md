@@ -24,7 +24,7 @@ Using this dataset, several deep learning neural network models were created in 
 
 ## Results
 
-Data Preprocessing
+### Data Preprocessing
 * What variable(s) are the target(s) for your model?    
 
 Since the purpose of the model was to predict the success of funded applicants, the field 'IS_SUCCESSFUL' was the target variable for the model.
@@ -135,7 +135,7 @@ A similar case also occurred in the CLASSIFICATION field, where there were a lar
 
 Besides the consolidation of certain cases within CLASSIFICATION and APPLICATION, the fields for EIN and NAME were both excluded entirely from the data.  Each case for these fields were compeltely unique/distinct and, in a practical sense, have no correlation or impact upon the success of a funded venture.
 
-Compiling, Training, and Evaluating the Model
+### Compiling, Training, and Evaluating the Model
 * How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
 Our initial model consisted of three layers total with the first layer containing 80 neurons, the second layer containing 30 neurons, and the last/ouput later containing one neuron.  The three layer structure and the large number of neurons was used in order to include additional levels of processing given the complexity and breadth of the features involved (after processing and encoding, the features read into the model came to a total of 49).  As for the activation functions, the first layer utilized the ReLu function, due to its relatively fast processing, application for classifications, and the lack of negative numbers in the training data.  The remaining layers used a sigmoid activation function due to its more robust application for binary classifications which was the aim of the model.
@@ -146,8 +146,6 @@ Our initial model consisted of three layers total with the first layer containin
 The initial trained model, when evaluated using the test data, yielded an accuracy of ~72.87%.  This failed to meet the 75% threshold and required additional optimizations.
 
 * What steps did you take in your attempts to increase model performance?
-
-
 
 A total of three attempts were made to optimize the model and reach the 75% threshold.  The first attempt required revisiting the dataset and rethinking how it was being organized.  While the some of the data in the CLASSIFICATION and APPLICATION_TYPE fields was consolidated into OTHER bins, the rare occurrences of certain cases may have skewed the OTHER bins in a way that negatively impact accuracy.  By lowering the cutoff frequency for grouping data into an OTHER bin, the model was able to improve slightly to ~72.94 accuracy based on the test data.
 

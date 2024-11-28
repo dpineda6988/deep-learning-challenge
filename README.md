@@ -1,5 +1,4 @@
 # Deep-Learning-Challenge
-# Credit-Risk-Classification
 
 The creation and evaluation of several deep learning neural networks that were built using Tensorflow to serve as a a binary classifier that can predict whether applicants for business venture funding will be successful.
 
